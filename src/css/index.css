@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#container-header {
+    background-color: black;
+    color: white;
+    padding: 0.2em;
+}
+
+#container-body {
+    padding: 0.5em;
+}
+
+#header-logo{
+    height: 52px;
+    width: 162px;
+}
+
+#node-info {
+    font-weight: bold;
+}

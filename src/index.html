@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+    <!-- external dependencies -->
+    <script src="js/web3.min.js"></script>
+    <!-- app code -->
+    <script src="js/Configuration.js"></script>
+    <script src="js/Web3Manager.js"></script>
+    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+<div id="container">
+
+    <div id="container-header">
+        <p><img id="header-logo" src="img/cryptown.svg"></p>
+    </div>
+
+    <div id="container-body">
+
+        <div id="node-info">
+            <p>Last block height: <span id="block-height"></span></p>
+            <p>Node peers: <span id="node-peers"></span></p>
+        </div>
+
+        <div id="user-accounts">
+            <h3>User accounts</h3>
+        </div>
+
+        <div id="send-funds">
+            <form>
+                <p>
+                    <label for="recipient-address">Recipient address</label>
+                    <input type="text" name="recipient-address" id="recipient-address" value="0">
+                </p>
+                <p>
+                    <label for="recipient-ammount">Ammount</label>
+                    <input type="text" name="recipient-ammount" id="recipient-ammount" value="0">
+                </p>
+                <p>
+                    <input type="button" id="send-funds" onclick="sendFunds()" value="Send funds">
+                </p>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+
+
+<script>
+    App.initApp();
+    console.log('Inicializado');
+</script>
+
+</html>
