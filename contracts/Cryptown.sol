@@ -2,7 +2,7 @@ pragma solidity ^0.4.11;
 
 import "./Ownable.sol";
 
-contract Cryptown is Ownable{
+contract Cryptown is Ownable {
     
     // Company information
     struct CompanyInfo {
@@ -67,9 +67,9 @@ contract Cryptown is Ownable{
     
     
     // Obtain the parcel index on array of parcels
-    function indexOfParcel(CompanyInfo _companyInfo, uint32 _parcelId) internal pure returns(uint8){
-        for(uint8 i = 0; i < _companyInfo.parcels.length; i++){
-            if(_companyInfo.parcels[i] == _parcelId){
+    function indexOfParcel(CompanyInfo _companyInfo, uint32 _parcelId) internal pure returns(uint8) {
+        for(uint8 i = 0; i < _companyInfo.parcels.length; i++) {
+            if(_companyInfo.parcels[i] == _parcelId) {
                 return i;
             }
         }

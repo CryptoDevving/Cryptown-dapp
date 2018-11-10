@@ -10,7 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "truffle-contract": "^3.0.4"
+  },
   "devDependencies": {
     "lite-server": "^2.3.0"
   }

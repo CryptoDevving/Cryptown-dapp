@@ -1,5 +1,5 @@
 /**
- * To manage the web3 driver
+ * Web3 driver management - performs all operations related to Geth and Ethereum Node
  */
 
 var Web3Manager = {
@@ -9,6 +9,7 @@ var Web3Manager = {
 
     initWeb3: function(){
         if(typeof web3 !== 'undefined'){
+            Web3Manager.web3Provider = new Web3.providers.HttpProvider( web3.providers.HttpProvider );
             Web3Manager.web3 = new Web3(web3.currentProvider);
         } else {
             // If no injected web3 instance is detected, fall back to Ganache
@@ -52,14 +53,15 @@ var Web3Manager = {
         this.initWeb3();
     }
 
-
+    
 };
 
-
+// Check if metamask is the current provider
 function checkMetamask(provider){
     if(!provider) return false;
     if(!provider.currentProvider) return false;
     return provider.currentProvider.isMetaMask;
 }
 
+// Initializes manager
 Web3Manager.initManager();
